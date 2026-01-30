@@ -23,6 +23,7 @@ const RegexTesterPage = lazy(() => import("@/pages/RegexTesterPage").then(m => (
 const PasswordGeneratorPage = lazy(() => import("@/pages/PasswordGeneratorPage").then(m => ({ default: m.PasswordGeneratorPage })))
 const MarkdownPreviewPage = lazy(() => import("@/pages/MarkdownPreviewPage").then(m => ({ default: m.MarkdownPreviewPage })))
 const JwtParserPage = lazy(() => import("@/pages/JwtParserPage").then(m => ({ default: m.JwtParserPage })))
+const FishingPage = lazy(() => import("@/pages/FishingPage").then(m => ({ default: m.FishingPage })))
 
 // 加载中组件
 function PageLoader() {
@@ -183,6 +184,14 @@ function App() {
             element={
               <Suspense fallback={<PageLoader />}>
                 <JwtParserPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="fishing"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <FishingPage />
               </Suspense>
             }
           />

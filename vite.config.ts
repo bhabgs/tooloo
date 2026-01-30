@@ -13,6 +13,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: 'tooloo-web',
     rollupOptions: {
       output: {
         manualChunks: {

@@ -27,7 +27,9 @@ import {
   ImageIcon,
   CalendarClock,
   FileCode,
-  ChevronRight
+  ChevronRight,
+  Fish,
+  Gamepad2
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -221,6 +223,21 @@ const toolCategories: ToolCategory[] = [
         path: "/markdown-preview",
         icon: <FileText className="size-5" />,
         keywords: ["markdown", "md", "预览", "文档", "编辑器"]
+      }
+    ]
+  },
+  {
+    name: "趣味工具",
+    id: "fun",
+    icon: <Gamepad2 className="size-4" />,
+    tools: [
+      {
+        name: "程序员摸鱼",
+        description: "假装在编译部署，支持老板键",
+        path: "/fishing",
+        icon: <Fish className="size-5" />,
+        tag: "趣味",
+        keywords: ["摸鱼", "fishing", "老板键", "编译", "假装工作", "划水"]
       }
     ]
   }
