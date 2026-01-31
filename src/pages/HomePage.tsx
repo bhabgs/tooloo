@@ -29,7 +29,12 @@ import {
   FileCode,
   ChevronRight,
   Fish,
-  Gamepad2
+  Gamepad2,
+  CaseSensitive,
+  ListX,
+  Scale,
+  Dices,
+  Type
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -76,6 +81,49 @@ const toolCategories: ToolCategory[] = [
         path: "/url-codec",
         icon: <FileText className="size-5" />,
         keywords: ["url", "编码", "解码", "urlencode", "转义"]
+      },
+      {
+        name: "HTML 实体编解码",
+        description: "HTML 特殊字符与实体编码互转",
+        path: "/html-entity",
+        icon: <Code className="size-5" />,
+        keywords: ["html", "实体", "编码", "解码", "entity", "特殊字符"]
+      }
+    ]
+  },
+  {
+    name: "文本处理",
+    id: "text",
+    icon: <Type className="size-4" />,
+    tools: [
+      {
+        name: "字数统计",
+        description: "统计字符数、单词数、行数等",
+        path: "/word-count",
+        icon: <FileText className="size-5" />,
+        tag: "常用",
+        keywords: ["字数", "统计", "字符", "单词", "行数", "word count"]
+      },
+      {
+        name: "大小写转换",
+        description: "驼峰、下划线、大写等命名格式转换",
+        path: "/case-converter",
+        icon: <CaseSensitive className="size-5" />,
+        keywords: ["大小写", "驼峰", "下划线", "命名", "camel", "snake"]
+      },
+      {
+        name: "文本去重",
+        description: "去除文本中的重复行",
+        path: "/text-deduplicate",
+        icon: <ListX className="size-5" />,
+        keywords: ["去重", "重复", "去除", "deduplicate", "unique"]
+      },
+      {
+        name: "Lorem Ipsum",
+        description: "生成排版设计用的占位文本",
+        path: "/lorem-generator",
+        icon: <FileText className="size-5" />,
+        keywords: ["lorem", "ipsum", "占位", "文本", "生成", "测试"]
       }
     ]
   },
@@ -165,6 +213,13 @@ const toolCategories: ToolCategory[] = [
         icon: <Clock className="size-5" />,
         tag: "常用",
         keywords: ["时间戳", "timestamp", "unix", "日期", "时间", "转换"]
+      },
+      {
+        name: "Cron 表达式",
+        description: "解析和生成 Cron 时间表达式",
+        path: "/cron-parser",
+        icon: <CalendarClock className="size-5" />,
+        keywords: ["cron", "定时", "表达式", "计划任务", "时间"]
       }
     ]
   },
@@ -201,6 +256,20 @@ const toolCategories: ToolCategory[] = [
         path: "/text-diff",
         icon: <GitCompare className="size-5" />,
         keywords: ["文本", "对比", "差异", "diff", "比较"]
+      },
+      {
+        name: "单位转换器",
+        description: "长度、面积、体积、重量等单位转换",
+        path: "/unit-converter",
+        icon: <Scale className="size-5" />,
+        keywords: ["单位", "转换", "长度", "重量", "温度", "面积", "体积"]
+      },
+      {
+        name: "随机数生成",
+        description: "生成随机整数、小数或从列表抽取",
+        path: "/random-generator",
+        icon: <Dices className="size-5" />,
+        keywords: ["随机", "随机数", "抽取", "抽奖", "random"]
       }
     ]
   },

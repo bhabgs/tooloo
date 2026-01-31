@@ -24,6 +24,14 @@ const PasswordGeneratorPage = lazy(() => import("@/pages/PasswordGeneratorPage")
 const MarkdownPreviewPage = lazy(() => import("@/pages/MarkdownPreviewPage").then(m => ({ default: m.MarkdownPreviewPage })))
 const JwtParserPage = lazy(() => import("@/pages/JwtParserPage").then(m => ({ default: m.JwtParserPage })))
 const FishingPage = lazy(() => import("@/pages/FishingPage").then(m => ({ default: m.FishingPage })))
+const WordCountPage = lazy(() => import("@/pages/WordCountPage").then(m => ({ default: m.WordCountPage })))
+const CaseConverterPage = lazy(() => import("@/pages/CaseConverterPage").then(m => ({ default: m.CaseConverterPage })))
+const TextDeduplicatePage = lazy(() => import("@/pages/TextDeduplicatePage").then(m => ({ default: m.TextDeduplicatePage })))
+const HtmlEntityPage = lazy(() => import("@/pages/HtmlEntityPage").then(m => ({ default: m.HtmlEntityPage })))
+const UnitConverterPage = lazy(() => import("@/pages/UnitConverterPage").then(m => ({ default: m.UnitConverterPage })))
+const RandomGeneratorPage = lazy(() => import("@/pages/RandomGeneratorPage").then(m => ({ default: m.RandomGeneratorPage })))
+const CronParserPage = lazy(() => import("@/pages/CronParserPage").then(m => ({ default: m.CronParserPage })))
+const LoremGeneratorPage = lazy(() => import("@/pages/LoremGeneratorPage").then(m => ({ default: m.LoremGeneratorPage })))
 
 // 加载中组件
 function PageLoader() {
@@ -192,6 +200,70 @@ function App() {
             element={
               <Suspense fallback={<PageLoader />}>
                 <FishingPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="word-count"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <WordCountPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="case-converter"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <CaseConverterPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="text-deduplicate"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <TextDeduplicatePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="html-entity"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <HtmlEntityPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="unit-converter"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <UnitConverterPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="random-generator"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <RandomGeneratorPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="cron-parser"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <CronParserPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="lorem-generator"
+            element={
+              <Suspense fallback={<PageLoader />}>
+                <LoremGeneratorPage />
               </Suspense>
             }
           />
